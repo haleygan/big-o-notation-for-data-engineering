@@ -5,7 +5,7 @@ adjust §3 if a session runs long, short, or surfaces a new topic that needs fol
 the reference files (see `learning.md`'s Part 2/3 pattern for how that folding-in works).
 
 Not part of the core Big O content (`concept.md` → 7 folders → `capstone.md` →
-`profiling.md`) — this file is about *this specific learner's* path through it, not the
+`09-time-profiling.md` and `10-memory-profiling.md`) — this file is about *this specific learner's* path through it, not the
 subject matter itself.
 
 ---
@@ -47,7 +47,7 @@ repetition:
 | 27 | Benchmark doubling signature — n doubling → time response by class | `concept.md` §3 |
 | 28 | `set.add` vs `list.append` — same O(1) amortized, different constant factor | `01-O1-constant-de-application.md` §3 |
 | 29 | String concatenation — same O(n²) pattern as list concat | `01-O1-constant-de-application.md` §4, `concept.md` §5 |
-| 30 | Profiling — introduced briefly, parked for dedicated session | `profiling.md` (stub) |
+| 30 | Profiling — introduced briefly, parked for dedicated session | `09-time-profiling.md` (stub) |
 
 All 30 topics above are now represented in the reference files (items 27-29 and the
 generator pattern were added to `concept.md` / `01-O1-constant` after the session, since
@@ -162,14 +162,27 @@ being a viable answer."
 | 4 | Common pitfalls — OOM, over-engineering, adversarial input | `capstone.md` §5 |
 | 5 | Final capstone test — full decision scenario | — |
 
-### Session 9 — Post-Capstone Applied Topics
+### Session 9 — Completed — Time Profiling
 
 | Order | Topic | Source |
 |---|---|---|
-| 1 | Profiling — `cProfile`, reading output, mapping back to Big O | `profiling.md` (fill in stub) |
-| 2 | Amortized complexity, additional structures (deque, heap) | derived, ad hoc |
-| 3 | Reading Spark execution plans for complexity | `profiling.md` §3 |
-| 4 | Real pipeline optimization exercise — end-to-end scenario | applied, ad hoc |
+| 1 | What profiling measures vs. Big O — the two complementary diagnostics | `09-time-profiling.md` §1 |
+| 2 | Reading `cProfile` output — `ncalls`, `tottime`, `cumtime`, spotting the real bottleneck | `09-time-profiling.md` §2 |
+| 3 | Reading a Spark execution plan — `explain()` DAG, mapping stages back to join/sort strategies | `09-time-profiling.md` §3 |
+| 4 | Mapping profiling results back to Big O classes — growth pattern recognition | `09-time-profiling.md` §4 |
+
+### Session 10 — Next — Memory Profiling
+
+| Order | Topic | Source | Est. time |
+|---|---|---|---|
+| 1 | What memory profiling measures vs. space complexity — complementary diagnostics | `10-memory-profiling.md` §1 | 10 min |
+| 2 | Tool comparison — `memory_profiler`, `tracemalloc`, `psutil`, `objgraph`, `memray` | `10-memory-profiling.md` §2 | 10 min |
+| 3 | Case 1: Finding peak memory per function — `@profile`, reading Increment vs. Mem usage | `10-memory-profiling.md` §3 | 20 min |
+| 4 | Case 2: Tracking memory growth over a run — `tracemalloc` snapshots and loop | `10-memory-profiling.md` §4 | 20 min |
+| 5 | Case 3: Catching unbounded accumulation — `objgraph.show_growth()`, reference chains | `10-memory-profiling.md` §5 | 20 min |
+| 6 | Doubling test for space complexity — memory ratio table, setup, reading the ratio column | `10-memory-profiling.md` §6 | 15 min |
+| 7 | Output reading strategy — the five-step decision order | `10-memory-profiling.md` §7 | 10 min |
+| 8 | End-of-session test — four questions | `10-memory-profiling.md` §8 | 15 min |
 
 ---
 

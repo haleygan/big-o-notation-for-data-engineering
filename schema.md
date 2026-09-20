@@ -11,7 +11,8 @@ Big O Notation/
 ├── schema.md                          (this file)
 ├── concept.md                         (foundational primer — Part 1)
 ├── capstone.md                        (cross-complexity comparison — Part 3)
-├── profiling.md                       (post-capstone applied topics — Part 4, stub)
+├── 09-time-profiling.md               (post-capstone applied topics — Part 4)
+├── 10-memory-profiling.md             (post-capstone applied topics — Part 4)
 ├── progress.md                        (this learner's session log + plan, not core content)
 ├── 01-O1-constant/
 │   ├── 01-O1-constant-overview.md
@@ -222,7 +223,7 @@ toward. Reads each folder's `space-complexity.md` (not `overview.md`) for the sp
    a memory budget that will OOM in production; over-engineering a low-complexity
    solution for an n that will never be large enough to matter
 
-### 7. `profiling.md` (root level — Part 4, post-capstone applied topics)
+### 7. `09-time-profiling.md` and `10-memory-profiling.md` (root level — Part 4, post-capstone applied topics)
 
 Not part of the core 3-part arc. Parked deliberately: profiling only means something
 once the reader already has the Big O vocabulary to interpret what a profiler's numbers
